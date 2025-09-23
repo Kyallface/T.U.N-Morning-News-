@@ -1,0 +1,27 @@
+# Python crap
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Virtual envs
+.env
+.venv/
+venv/
+ENV/
+env.bak/
+
+# dotenv file with secrets
+*.env
+
+# OS garbage
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# IDE nonsense
+.vscode/
+.idea/
