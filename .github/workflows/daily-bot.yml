@@ -2,7 +2,7 @@ name: Daily Discord Bot
 
 on:
   schedule:
-    - cron: "0 9 * * *"   # 9:00 UTC every day
+    - cron: "0 10 * * *"   # 9:00 UTC every day
   workflow_dispatch:       # lets you trigger manually from the Actions tab
 
 jobs:
