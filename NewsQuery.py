@@ -43,7 +43,7 @@ async def send_message_once():
     parts = []
     current = []
     for line in msg.splitlines():
-        if line.strip().startswith(("Jessica Hale:", "Steve Bakersfield:")):
+        if line.strip().startswith(("***Jessica Hale*** :", "***Steve Bakersfield*** :")):
             if current:
                 parts.append("\n".join(current))
                 current = []
