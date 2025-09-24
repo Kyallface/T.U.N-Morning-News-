@@ -1,9 +1,8 @@
 import discord
 from openai import OpenAI
-import asyncio
 import os
-from discord.ext import tasks
 from dotenv import load_dotenv
+import asyncio
 
 # Load .env values
 load_dotenv()
@@ -25,7 +24,7 @@ with open("persona.txt", "r", encoding="utf-8") as f:
 # Get message from OpenAI
 async def get_message_from_gpt():
     response = openai_client.chat.completions.create(
-        model="gpt-5",  # or gpt-4.1
+        model="gpt-4o-mini",  # cheap + fast, or "gpt-4.1" if you want
         messages=[
             {"role": "system", "content": persona_instructions},
             {"role": "user", "content": "Give me today's daily message."}
@@ -33,9 +32,7 @@ async def get_message_from_gpt():
     )
     return response.choices[0].message.content
 
-# Task loop
-@tasks.loop(hours=24)
-async def daily_post():
+async def send_message_once():
     channel = discord_client.get_channel(CHANNEL_ID)
     try:
         msg = await get_message_from_gpt()
@@ -46,7 +43,7 @@ async def daily_post():
     parts = []
     current = []
     for line in msg.splitlines():
-        if line.strip().startswith(("***Jessica Hale*** :", "***Steve Bakersfield*** :")):
+        if line.strip().startswith(("Jessica Hale:", "Steve Bakersfield:")):
             if current:
                 parts.append("\n".join(current))
                 current = []
@@ -60,12 +57,13 @@ async def daily_post():
             part = part[:1997] + "..."
         await channel.send("\n" + part)
 
+    # Exit after sending
+    await discord_client.close()
 
-# On ready
 @discord_client.event
 async def on_ready():
     print(f"Logged in as {discord_client.user}")
-    daily_post.start()
+    await send_message_once()
 
 # Run bot
 discord_client.run(DISCORD_TOKEN)
