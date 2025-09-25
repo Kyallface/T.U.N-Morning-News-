@@ -14,7 +14,7 @@ DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Flags
-LIVE_FLAG = False   # set True for production
+LIVE_FLAG = True   # set True for production
 AUDIO_FLAG = True   # generate audio
 TEXT_FLAG = False   # future option
 
