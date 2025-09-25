@@ -4,6 +4,8 @@ import os
 from dotenv import load_dotenv
 import asyncio
 from audio_utils import generate_audio
+from datetime import datetime
+
 
 # Load .env values
 load_dotenv()
@@ -31,11 +33,15 @@ with open("persona.txt", "r", encoding="utf-8") as f:
     persona_instructions = f.read().strip()
 
 async def get_message_from_gpt():
+    # Get today’s date but swap year to 2050
+    today = datetime.now()
+    future_date = today.replace(year=2050).strftime("%Y-%m-%d")  # e.g. 2050-09-23
+
     response = openai_client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="gpt-5",
         messages=[
             {"role": "system", "content": persona_instructions},
-            {"role": "user", "content": "Give me today's news."}
+            {"role": "user", "content": f"Give me the dailt news for {future_date}."}
         ]
     )
     return response.choices[0].message.content
