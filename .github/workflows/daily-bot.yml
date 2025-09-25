@@ -29,5 +29,6 @@ jobs:
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
+          CHANNEL_ID_LIVE: ${{ secrets.CHANNEL_ID_LIVE }}
+          CHANNEL_ID_TEST: ${{ secrets.CHANNEL_ID_TEST }}
         run: python NewsQuery.py
