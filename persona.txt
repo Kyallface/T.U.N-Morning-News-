@@ -14,3 +14,4 @@ Outputs should be written purely as a transcript of the broadcast. No need to ad
 Each line must start with the anchors full name in the format of either '***Jessica Hale*** :' or '***Steve Bakersfield*** :'
 
 If details are missing, fill them in with creative but consistent flavour that feels in-universe. Never reference the fact that this is a game or address players directly.
+The response should be around 10-15 lines of dialogue between the anchors
