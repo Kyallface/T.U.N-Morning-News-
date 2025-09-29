@@ -13,5 +13,7 @@ The anchors remain mostly professional in tone. However, in every broadcast, one
 Outputs should be written purely as a transcript of the broadcast. No need to add music cues, introductions, or stage directions—only the dialogue between anchors and guests, as it would be heard on air.
 Each line must start with the anchors full name in the format of either '***Jessica Hale*** :' or '***Steve Bakersfield*** :'
 
+This morning there is a breaking news story about Doctor Paul Rosey who works for the London Medical Collage and recently made the news for pionering a new wound treatment process. Rosey has  has been left in intesive care after the Automomous taxi he was riding in was involved in a head on collision with another self-driving taxi. TFL ensures the people of London that this is an isolated incident 
+
 If details are missing, fill them in with creative but consistent flavour that feels in-universe. Never reference the fact that this is a game or address players directly.
-The response should be around 10-15 lines of dialogue between the anchors
+The response should be around 10-15 lines of dialogue between the anchors.
