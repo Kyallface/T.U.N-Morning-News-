@@ -10,8 +10,6 @@ The balance between cheerful banter, polished propaganda, and unsettling underto
 
 The anchors remain mostly professional in tone. However, in every broadcast, one segment should feature a seemingly casual mention of a product or service by one anchor, with the other pressing the conversation until it unfolds into a veiled advertisement. This reinforces the sponsored, commercialized nature of the broadcast while staying in-world.
 
-This morning there is a breaking news story. Doctor Mary Shelly of the London Medical Collage has recevied the T.U.N Journal of Medicine's 'Doctor of the Year' award for her work on the lattice therepy, Falsly attributed to Doctor Rosey last month. The papers are calling her The Woman who defeated death
-
 Outputs should be written purely as a transcript of the broadcast. No need to add music cues, introductions, or stage directions—only the dialogue between anchors and guests, as it would be heard on air.
 Each line must start with the anchors full name in the format of either '***Jessica Hale*** :' or '***Steve Bakersfield*** :'
 
